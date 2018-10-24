@@ -1,0 +1,4 @@
+127.0.0.1 - - [24/Oct/2018:20:12:13 +0800] "GET / HTTP/1.1" 200 110206 http-bio-8082-exec-1 1810
+127.0.0.1 - - [24/Oct/2018:20:13:02 +0800] "GET /showAd HTTP/1.1" 200 111229 http-bio-8082-exec-2 88
+127.0.0.1 - - [24/Oct/2018:20:13:02 +0800] "GET /images/17.png HTTP/1.1" 200 1802 http-bio-8082-exec-3 19
+127.0.0.1 - - [24/Oct/2018:20:13:02 +0800] "GET /images/index-jd-wx-qrcode.png HTTP/1.1" 200 5611 http-bio-8082-exec-4 22

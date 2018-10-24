@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://code.alibabatech.com/schema/dubbo 
+		http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+		
+	<!-- 给当前Provider自定义个名字 -->
+	<dubbo:application name="dubbo-ego-service"/>
+	<!-- 配置注册中心  -->
+	<dubbo:registry address="127.0.0.1:2181" protocol="zookeeper"></dubbo:registry>
+	<!-- 配置端口 -->
+	<dubbo:protocol name="dubbo" port="20888" payload="80000000"></dubbo:protocol>
+	<!-- 注册功能 -->
+	<dubbo:service interface="com.ego.dubbo.service.TBItemDubboService" ref="tbItemDubboServiceImpl"></dubbo:service>
+	<bean id="tbItemDubboServiceImpl" class="com.ego.dubbo.service.impl.TBItemDubboServiceImpl"></bean>
+	<!-- 显示UItree -->
+	<dubbo:service interface="com.ego.dubbo.service.TBItemCatDubboService" ref="tBItemCatDubboServiceImpl"></dubbo:service>
+	<bean id="tBItemCatDubboServiceImpl" class="com.ego.dubbo.service.impl.TBItemCatDubboServiceImpl"></bean>
+	<!-- 插入一个ITEM DESC -->
+	<dubbo:service interface="com.ego.dubbo.service.TBItemDescDubboService" ref="tBItemDescServiceImpl"></dubbo:service>
+	<bean id="tBItemDescServiceImpl" class="com.ego.dubbo.service.impl.TBItemDescDubboServiceImpl"></bean>
+	
+		<!-- 插入一个tb_item_param注册规格服务 -->
+	<dubbo:service interface="com.ego.dubbo.service.TBItemParamDubboService" ref="tBItemParamDubboServiceImpl"></dubbo:service>
+	<bean id="tBItemParamDubboServiceImpl" class="com.ego.dubbo.service.impl.TBItemParamDubboServiceImpl"></bean>
+	
+	
+			<!-- 注册tb_Content_Category表服务 -->
+	<dubbo:service interface="com.ego.dubbo.service.TBContentCategoryDubboService" ref="tBContentCategoryDubboServiceImpl"></dubbo:service>
+	<bean id="tBContentCategoryDubboServiceImpl" class="com.ego.dubbo.service.impl.TBContentCategoryDubboServiceImpl"></bean>
+	
+	
+			<!-- 注册tb_Content表服务 -->
+	<dubbo:service interface="com.ego.dubbo.service.TBContentDubboService" ref="tBContentDubboServiceImpl"></dubbo:service>
+	<bean id="tBContentDubboServiceImpl" class="com.ego.dubbo.service.impl.TBContentDubboServiceImpl"></bean>
+	
+		
+	<import resource="../../applicationContext.xml"/>
+</beans>
+
