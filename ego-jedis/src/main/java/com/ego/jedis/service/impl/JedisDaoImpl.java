@@ -33,6 +33,9 @@ public class JedisDaoImpl implements JedisDao{
 		// TODO Auto-generated method stub
 		return jedisClient.getResource().get(key);
 	}
+	public long delete(String key){
+		return jedisClient.getResource().del(key);
+	}
 	public static void main(String[] str){
 		ApplicationContext ac = new ClassPathXmlApplicationContext("classpath:/*.xml");
 		JedisPool client = (JedisPool) ac.getBean("redisClient");

@@ -77,4 +77,9 @@ public class TBItemDubboServiceImpl implements TBItemDubboService {
 		return tbItemMapper.selectByExample(example);
 	}
 
+	@Override
+	public TbItem selByItemId(long id) {
+		return tbItemMapper.selectByPrimaryKey(id);
+	}
+
 }

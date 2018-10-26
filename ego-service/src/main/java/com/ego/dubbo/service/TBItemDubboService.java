@@ -21,4 +21,5 @@ public interface TBItemDubboService {
 	int insItemDesc(TbItem tbItem,TbItemDesc tbItemDesc,TbItemParamItem tbItemParamItem) throws Exception;
 	
 	List<TbItem> selAllbyStatus(byte status);
+	TbItem selByItemId(long id);
 }

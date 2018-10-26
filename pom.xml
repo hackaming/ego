@@ -201,5 +201,6 @@
 		<module>ego-jedis</module>
 		<module>ego-search</module>
     <module>ego-passport</module>
-  </modules>
+    <module>ego-cart</module>
+	</modules>
 </project>

@@ -2,7 +2,7 @@ package com.ego.commons.pojo;
 
 public class EgoResult {
 	private int status;
-	private Object message;
+	private Object msg;
 	private Object data;
 
 	public int getStatus() {
@@ -14,11 +14,11 @@ public class EgoResult {
 	}
 
 	public Object getMessage() {
-		return message;
+		return msg;
 	}
 
 	public void setMessage(Object message) {
-		this.message = message;
+		this.msg = message;
 	}
 
 	public Object getData() {

@@ -21,13 +21,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.ego.commons.pojo.TBItemChild;
 import com.ego.dubbo.service.TBItemCatDubboService;
 import com.ego.dubbo.service.TBItemDescDubboService;
 import com.ego.dubbo.service.TBItemDubboService;
 import com.ego.pojo.TbItem;
 import com.ego.pojo.TbItemCat;
 import com.ego.pojo.TbItemDesc;
-import com.ego.search.pojo.TBItemChild;
 import com.ego.search.service.TbItemService;
 
 
